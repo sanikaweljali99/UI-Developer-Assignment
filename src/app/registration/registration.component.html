@@ -1,0 +1,68 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <span class="upload">
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+                <label class="upload-btn">Upload Your Photo:</label>
+            </span>
+            <div class="form-group">
+                <div>
+                    <input type="text" id="firstName" name="firstName" placeholder="FirstName" required>
+                </div>
+                <div>
+                    <input type="text" id="lastName" name="lastName" placeholder="LastName" required>
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="tel" id="mobileNo" name="mobileNo" placeholder="(541)754-3010" required>
+                </div>
+                <div class="age">
+                    <label class="age">Age</label>
+                    <input type="range" id="age" name="age" min="20" max="60" value="20" placeholder="Age" required>
+                    <span id="ageValue" class="age">20</span>
+                </div>
+                <div>
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                </div>
+                <div>
+                    <input type="text" id="country" name="country" placeholder="Country" required>
+                </div>
+                <div class="interest-container">
+                    <div class="tag-list" id="tag-list"></div>
+                    <input type="text" id="interest-input" name="tags" placeholder="Add your interests" required>
+                </div>
+                <div class="address">
+                    <select id="addressType" name="addressType" class="address" >
+                        <option value="Address">Address</option>
+                        <option value="home">Home</option>
+                        <option value="company">Company</option>
+                    </select>
+                </div>
+                <div id="addressFields"></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label class="checkbox">subscribe to newsletter</label>
+                </div>
+                <span>
+                    <button type="button" class="btn btn-info">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </div>
+        </form>
+        <div id="profileScreen" style="display:none;">
+            <h2>Profile Screen</h2>
+            <button id="editProfile">Edit Profile</button>
+            <div id="profileData"></div>
+        </div>
+    </div>
+    <div id="profileScreen" style="display:none;">
+        <h2>Profile Screen</h2>
+        <button id="editProfile">Edit Profile</button>
+        <div id="profileData"></div>
+    </div>
+    <button mat-button (click)="openDialog()">Register</button>
+    
+</form>
